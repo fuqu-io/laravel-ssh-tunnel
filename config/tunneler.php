@@ -12,11 +12,11 @@ return [
 	'local_port'    => env('TUNNELER_LOCAL_PORT', 3307),
 	'identity_file' => env('TUNNELER_IDENTITY_FILE', '/home/vagrant/.ssh/id_rsa'),
 
-	'bind_address' => env('TUNNELER_BIND_ADDRESS', 'cleartrust.thebackoffice.io'),
+	'bind_address' => env('TUNNELER_BIND_ADDRESS'),
 	'bind_port'    => env('TUNNELER_BIND_PORT', 3306),
 
 	'user'     => env('TUNNELER_USER', 'forge'),
-	'hostname' => env('TUNNELER_HOSTNAME', 'cleartrust.thebackoffice.io'),
+	'hostname' => env('TUNNELER_HOSTNAME'),
 	'port'     => env('TUNNELER_PORT', 22),
 	'wait'     => env('TUNNELER_CONN_WAIT', '500000'),
 	'tries'    => env('TUNNELER_CONN_TRIES', 1),
