@@ -1,7 +1,6 @@
 <?php namespace STS\Tunneler\Console;
 
 use Illuminate\Console\Command;
-use STS\Tunneler\Jobs\CreateTunnel;
 use STS\Tunneler\Tunnel;
 
 class TunnelerCommand extends Command {
