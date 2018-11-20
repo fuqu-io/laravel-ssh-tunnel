@@ -2,6 +2,7 @@
 
 use Illuminate\Console\Command;
 use STS\Tunneler\Jobs\CreateTunnel;
+use STS\Tunneler\Tunnel;
 
 class TunnelerCommand extends Command {
     /**
@@ -19,7 +20,8 @@ class TunnelerCommand extends Command {
 
     public function handle(){
         try {
-            $result = dispatch(new CreateTunnel());
+            $tunnel  = new Tunnel();
+            $result = $tunnel->start();
         }catch (\ErrorException $e){
             $this->error($e->getMessage());
             return 1;

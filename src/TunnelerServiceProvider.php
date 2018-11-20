@@ -32,7 +32,8 @@ class TunnelerServiceProvider extends ServiceProvider{
         $this->publishes([$this->configPath => $publishPath], 'config');
 
         if (config('tunneler.on_boot')){
-            dispatch(new CreateTunnel());
+            $tunnel = new Tunnel();
+            $tunnel->start();
         }
     }
 
